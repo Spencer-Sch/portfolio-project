@@ -26,7 +26,7 @@ const About = () => {
       <div className="app__profiles">
         {abouts.map((about, index) => (
           <motion.div
-            whiltInView={{ opacity: 1 }}
+            whileInView={{ opacity: 1 }}
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.5, type: 'tween' }}
             className="app__profile-item"
@@ -46,4 +46,8 @@ const About = () => {
   );
 };
 
-export default AppWrap(MotionWrap(About, 'about'), 'about', 'app__whitebg');
+export default AppWrap(
+  MotionWrap(About, 'app__about'),
+  'about',
+  'app__whitebg'
+);
